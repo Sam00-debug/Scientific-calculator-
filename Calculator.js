@@ -47,20 +47,76 @@ function absolute(a) {
 }
 
 
-// ===============================
-// TEST
-// ===============================
+// =================================
+// GET HTML ELEMENTS
+// =================================
 
-console.log(add(10, 5));
-console.log(subtract(10, 5));
-console.log(multiply(10, 5));
-console.log(divide(10, 5));
-console.log(remainder(10, 3));
+const number1 = document.getElementById("number1");
+const number2 = document.getElementById("number2");
 
-console.log(power(2, 5));
-console.log(square(6));
-console.log(cube(3));
+const operation =
+    document.getElementById("operation");
 
-console.log(squareRoot(25));
-console.log(cubeRoot(27));
-console.log(absolute(-20));
+const calculate =
+    document.getElementById("calculate");
+
+const result =
+    document.getElementById("result");
+
+
+// =================================
+// CALCULATE
+// =================================
+
+calculate.addEventListener("click", function () {
+
+    // Convert input text into numbers
+    const a = Number(number1.value);
+    const b = Number(number2.value);
+
+    let answer;
+
+
+    // Choose operation
+    if (operation.value === "add") {
+
+        answer = add(a, b);
+
+    }
+
+    else if (operation.value === "subtract") {
+
+        answer = subtract(a, b);
+
+    }
+
+    else if (operation.value === "multiply") {
+
+        answer = multiply(a, b);
+
+    }
+
+    else if (operation.value === "divide") {
+
+        answer = divide(a, b);
+
+    }
+
+    else if (operation.value === "remainder") {
+
+        answer = remainder(a, b);
+
+    }
+
+    else if (operation.value === "power") {
+
+        answer = power(a, b);
+
+    }
+
+
+    // Display answer
+    result.textContent =
+        "Result: " + answer;
+
+});
