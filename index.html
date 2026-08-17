@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JEE Maths Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="calculator">
+
+    <!-- Header -->
+    <header class="header">
+        <div>
+            <h1>JEE Maths</h1>
+            <p>Scientific Calculator</p>
+        </div>
+
+        <button class="mode-btn" id="modeBtn">DEG</button>
+    </header>
+
+
+    <!-- Display -->
+    <section class="display">
+
+        <div class="history" id="history">
+            <!-- Previous expression -->
+        </div>
+
+        <input
+            type="text"
+            id="display"
+            class="display-input"
+            placeholder="0"
+            readonly
+        >
+
+    </section>
+
+
+    <!-- Calculator body -->
+    <main class="calculator-body">
+
+        <!-- Scientific functions -->
+        <div class="scientific-grid">
+
+            <button class="function">sin</button>
+            <button class="function">cos</button>
+            <button class="function">tan</button>
+            <button class="function">log</button>
+            <button class="function">ln</button>
+
+            <button class="function">sin⁻¹</button>
+            <button class="function">cos⁻¹</button>
+            <button class="function">tan⁻¹</button>
+            <button class="function">√</button>
+            <button class="function">∛</button>
+
+            <button class="function">x²</button>
+            <button class="function">xʸ</button>
+            <button class="function">π</button>
+            <button class="function">e</button>
+            <button class="function">!</button>
+
+            <button class="function">nPr</button>
+            <button class="function">nCr</button>
+            <button class="function">%</button>
+            <button class="function">(</button>
+            <button class="function">)</button>
+
+        </div>
+
+
+        <!-- Main keypad -->
+        <div class="keypad">
+
+            <button class="danger" id="clear">AC</button>
+            <button class="control" id="delete">DEL</button>
+            <button class="control">Ans</button>
+            <button class="operator">÷</button>
+
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="operator">×</button>
+
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="operator">−</button>
+
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="operator">+</button>
+
+            <button>0</button>
+            <button>.</button>
+            <button class="operator">^</button>
+            <button class="equals">=</button>
+
+        </div>
+
+    </main>
+
+
+    <!-- JEE tools -->
+    <section class="jee-tools">
+
+        <button>
+            <span>∑</span>
+            <small>Sequences</small>
+        </button>
+
+        <button>
+            <span>∫</span>
+            <small>Calculus</small>
+        </button>
+
+        <button>
+            <span>📐</span>
+            <small>Geometry</small>
+        </button>
+
+        <button>
+            <span>⃗</span>
+            <small>Vectors</small>
+        </button>
+
+        <button>
+            <span>ƒ</span>
+            <small>Functions</small>
+        </button>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
